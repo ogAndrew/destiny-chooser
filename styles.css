@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #0000000;
+  --gray-color: #c4c4c4;
+  --force-green: #74ca76;
+  --sith-red: #a10f05;
+  --dark-red: #2d0001;
+  --jedi-gray: #5b5b5b;
+  --background-jedi: #f4f4f4;
+  --background-sith: var(--black-color)
+  --bg-toggle-green: #74ca76;
+  --bg-toggle-gray: #4b4b4b;
+  --toggle-gray-text: #a1a1a1;
+  --btn-jedi: #2b4882;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray);
+  font-family: 'Source Sans Prop', sans-serif;
+}
+
+h1,h2,h3 {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+h4, p {
+  font-family: 'Source Sans Prop', sans-serif;
+}
+
+h4 {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+nav {
+  z-index: 10;
+  position: fixed;
+  margin: 20px;
+  padding: 20px;
+  letter-spacing: 3px;
+  width: 33%;
+}
+
+nav a {
+  color: var(--white-color)
+}
+
+nav a:hover {
+  color: var(--jedi-gray);
+}
+
+.hero {
+  background-image: url('./images/light-banner.png');
+  background-size: cover;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero .title-group {
+  margin: 40px;
+}
+
+.hero .landing-title {
+  color: var(--white-color);
+  font-size: 100px;
+  max-width: 67%;
+}
+
