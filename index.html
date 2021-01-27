@@ -9,36 +9,39 @@
   </head>
   <body>
     <nav class="nav">
-      <a href="#">The Force</a>
-      <a href="#">Jedi</a>
-      <a href="#">Choose</a>
+      <a href="#force">The Force</a>
+      <a href="#jedi">Jedi</a>
+      <a href="#choose">Choose Your Destiny</a>
     </nav>
     <!-- Hero Section -->
     <section class="hero">
       <div class="title-group">
         <h1 class="landing-title">May the force be with you</h1>
-        <label class="theme-switch">
-          <input type="checkbox" />
-          <div class="slider round"></div>
-        </label>
+        <div class="theme-switch-wrapper">
+          <span class="toggle-text">Light Side</span>
+          <label class="theme-switch">
+            <input type="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
       </div>
     </section>
     <!-- The Force Section -->
-    <section id="force">
-      <p class="force-title">The Force</p>
-      <h3 class="force-quote">
+    <section id="force" class="force">
+      <p class="quote-title">The Force</p>
+      <h3 class="quote">
         The Force is what gives a Jedi his power. It's an energy field created
         by all living things. It surrounds us and penetrates us;
         <span class="binds-quote">it binds the galaxy together.</span>
       </h3>
-      <p class="obj-wan">-Obi-Wan Kenobi</p>
+      <p class="author">- Obi-Wan Kenobi</p>
     </section>
     <!-- Jedi Section -->
-    <section id="jedi">
+    <section id="jedi" class="jedi">
       <div class="jedi-card">
         <div class="jedi-info">
           <h2 class="jedi-name">Master Yoda</h2>
-          <buttion class="bio">READ BIO</buttion>
+          <buttion class="btn-bio">READ BIO</buttion>
           <div class="jedi-info-group">
             <p>Home Planet</p>
             <p>unknown</p>
@@ -48,19 +51,75 @@
             <p>unknown</p>
           </div>
         </div>
-        <div class="img-container">
-          <img src="" alt="" />
+        <div class="jedi-img-container">
+          <img src="./images/light-yoda.png" alt="Master Yoda" />
+        </div>
+      </div>
+      <div class="jedi-card">
+        <div class="jedi-info">
+          <h2 class="jedi-name">Master Yoda</h2>
+          <buttion class="btn-bio">READ BIO</buttion>
+          <div class="jedi-info-group">
+            <p>Home Planet</p>
+            <p>unknown</p>
+          </div>
+          <div class="jedi-info-group">
+            <p>Star Ships</p>
+            <p>unknown</p>
+          </div>
+        </div>
+        <div class="jedi-img-container">
+          <img src="./images/light-quigon.png" alt="Master Yoda" />
+        </div>
+      </div>
+      <div class="jedi-card">
+        <div class="jedi-info">
+          <h2 class="jedi-name">Master Yoda</h2>
+          <buttion class="btn-bio">READ BIO</buttion>
+          <div class="jedi-info-group">
+            <p>Home Planet</p>
+            <p>unknown</p>
+          </div>
+          <div class="jedi-info-group">
+            <p>Star Ships</p>
+            <p>unknown</p>
+          </div>
+        </div>
+        <div class="jedi-img-container">
+          <img src="./images/light-obiwan.png" alt="Master Yoda" />
+        </div>
+      </div>
+      <div class="jedi-card">
+        <div class="jedi-info">
+          <h2 class="jedi-name">Master Yoda</h2>
+          <button class="btn-bio">READ BIO</buttion>
+          <div class="jedi-info-group">
+            <p>Home Planet</p>
+            <p>unknown</p>
+          </div>
+          <div class="jedi-info-group">
+            <p>Star Ships</p>
+            <p>unknown</p>
+          </div>
+        </div>
+        <div class="jedi-img-container">
+          <img src="./images/light-luke.png" alt="Master Yoda" />
         </div>
       </div>
     </section>
-    <section id="choose">
-      <h3 class="choose-light">
-        Darkness rises <span class="choose-light">and light to meet it.</span>
+    <section id="choose" class="choose">
+      <h3 class="choose-text">
+        Darkness rises <br /><span class="choose-light"
+          >and light to meet it.</span
+        >
       </h3>
-      <label class="theme-switch">
-        <input type="checkbox" />
-        <div class="slider round"></div>
-      </label>
+      <div class="theme-switch-wrapper">
+        <span class="toggle-text">Light Side</span>
+        <label class="theme-switch">
+          <input type="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
     </section>
     <script src="script.js"></script>
   </body>
