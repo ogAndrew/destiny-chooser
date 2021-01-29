@@ -104,6 +104,13 @@ nav a:focus {
   min-height: 100vh;
 }
 
+.bg-sith {
+  background-color: #000000;
+}
+
+p.sith {
+  color: #ffffff;
+}
 
 .quote {
   color: var(--gray-color);
@@ -115,6 +122,11 @@ nav a:focus {
 .binds-quote {
   color: var(--force-green)
 }
+
+.unnatural {
+  color: #ffffff;
+}
+
 
 /* Section Jedi*/
 .jedi {
