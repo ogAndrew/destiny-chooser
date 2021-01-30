@@ -14,6 +14,7 @@
   --bg-toggle-gray: #4b4b4b;
   --toggle-gray-text: #a1a1a1;
   --btn-jedi: #2b4882;
+  --card-sith: #2D0001;
 }
 
 html {
@@ -128,7 +129,7 @@ p.sith {
 }
 
 
-/* Section Jedi*/
+/* Section Jedi/Sith */
 .jedi {
   margin: 0 40px;
   width: auto;
@@ -140,7 +141,7 @@ p.sith {
   outline: none;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   width: 80%;
-  height: 535px;
+  height: auto;
   max-width: 1100px;
   margin: 20px auto;
   background-color: var(--white-color);
@@ -155,14 +156,25 @@ p.sith {
   margin-bottom: 144px;
 }
 
+.row-reverse {
+  flex-direction: row-reverse;
+  margin: 0 40px 0 0;
+}
+
 .jedi-info {
   display: flex;
   flex-direction: column;
   margin-left: 40px;
 }
 
+.jedi-info p {
+  font-size: 16px;
+  margin: 20px 0 0 0;
+}
+
 .jedi-name {
-  font-size: 80px;
+  font-size: 50px;
+  margin-bottom: 10;
 }
 
 .btn-bio {
@@ -179,6 +191,7 @@ p.sith {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .btn-bio:hover,
@@ -189,13 +202,86 @@ p.sith {
 }
 
 .jedi-img-container {
-  max-width: 60%;
-  height: 100%;
+  width: 70%;
+  align-self: stretch;
 }
 
 img {
   width: 100%;
   height: 100%;
+}
+
+.sith-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 80%;
+  margin: 20px auto;
+  background-color: var(--card-sith);
+  border-radius: 10px;
+  color: var(--white-color);
+}
+
+.sith-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+
+.sith-info h2 {
+  font-size: 3rem;
+}
+
+.sith-info-group p {
+  font-size: 1rem;
+}
+
+.sith-info-group p:first-child {
+  font-weight: bold;
+}
+
+.sith-name {
+  font-size: 80px
+}
+
+.sith-img-container {
+  max-width: 70%;
+  align-self: stretch;
+}
+
+.btn-sith {
+  cursor: pointer;
+  width: 120px;
+  height: 41px;
+  border-radius: 20px;
+  outline: none;
+  color: var(--white-color);
+  background-color: var(--sith-red);
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.btn-sith:hover,
+.btn-sith:focus {
+  background-color: #000000;
+  color: var(--sith-red);
+  border: 1px solid var(--sith-red);
+}
+
+.sith-card:first-child {
+  margin-top: 0px
+}
+
+.sith-card:last-child {
+  margin-bottom: 144px;
 }
 
 /* Choose */
