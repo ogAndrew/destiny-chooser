@@ -132,8 +132,9 @@ p.sith {
 /* Section Jedi/Sith */
 .jedi {
   margin: 0 40px;
-  width: auto;
+  /* width: auto; */
 }
+
 .jedi-card {
   display: flex;
   align-items: center;
@@ -158,7 +159,6 @@ p.sith {
 
 .row-reverse {
   flex-direction: row-reverse;
-  margin: 0 40px 0 0;
 }
 
 .jedi-info {
@@ -243,10 +243,6 @@ img {
   font-weight: bold;
 }
 
-.sith-name {
-  font-size: 80px
-}
-
 .sith-img-container {
   max-width: 70%;
   align-self: stretch;
@@ -310,7 +306,6 @@ img {
 .choose .theme-switch-wrapper {
   margin-bottom: 80px;
 }
-
 
 /* Dark Side Toggle */
 .theme-switch-wrapper {

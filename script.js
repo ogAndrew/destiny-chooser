@@ -105,7 +105,6 @@ function textMode(color) {
   landingTitle.textContent = isSith
     ? 'Give in to your anger!'
     : 'May the force be with you';
-  // toggleText.textContent = isSith ? 'Dark Side' : 'Light Side';
   toggleBtnText(isSith);
   const darkQuote = `
     <p class="quote-title sith" id="quote-title">The Force</p>
@@ -155,23 +154,23 @@ function characterMode(color) {
   } else {
     const jediList = jediData.map(
       (jedi, i) =>
-        `<div class="jedi-card ${i % 2 !== 0 ? 'row-reverse' : ''}">
-        <div class="jedi-info">
-          <h2 class="jedi-name">${jedi.name}</h2>
-          <a href=${jedi.url} class="btn-bio">READ BIO</a>
-          <div class="jedi-info-group">
-            <p class="jedi-title">Home Planet</p>
-            <p>${jedi.homePlanet}</p>
+        `<div class="jedi-card ${i % 2 !== 0 && 'row-reverse'}">
+          <div class="jedi-info">
+            <h2 class="jedi-name">${jedi.name}</h2>
+            <a href=${jedi.url} class="btn-bio" target="_blank">READ BIO</a>
+            <div class="jedi-info-group">
+              <p class="jedi-title">Home Planet</p>
+              <p>${jedi.homePlanet}</p>
+            </div>
+            <div class="jedi-info-group">
+              <p>Star Ships</p>
+              <p>${jedi.ships}</p>
+            </div>
           </div>
-          <div class="jedi-info-group">
-            <p>Star Ships</p>
-            <p>${jedi.ships}</p>
+          <div class="jedi-img-container">
+            <img src=${jedi.image} alt=${jedi.name} id="image"${jedi.id} />
           </div>
-        </div>
-        <div class="jedi-img-container">
-          <img src=${jedi.image} alt=${jedi.name} id="image"${jedi.id} />
-        </div>
-      </div>;`
+        </div>`
     );
     characters.innerHTML = jediList;
   }
@@ -187,6 +186,7 @@ function toggleForce(color) {
     imageMode(LIGHT_SIDE);
     textMode(LIGHT_SIDE);
     characterMode(LIGHT_SIDE);
+    toggleSwitch.forEach((toggler) => (toggler.checked = false));
   }
 }
 
@@ -207,7 +207,6 @@ function onLoad() {
 toggleSwitch.forEach((toggler) => {
   toggler.addEventListener('change', switchTheme);
 });
-// toggleSwitch.addEventListener('change', switchTheme);
 
 // start app
 onLoad();
