@@ -82,11 +82,17 @@ const toggleText = document.querySelectorAll('#toggle-text');
 // Sith or Jedi Images
 function imageMode(color) {
   const isSith = color === DARK_SIDE ? true : false;
+  console.log(window.innerWidth);
+  const mediaQuery = window.matchMedia('(max-width: 500px)');
   if (isSith) {
-    hero.style.backgroundImage = "url('./images/dark-banner.png')";
+    mediaQuery.matches
+      ? (hero.style.backgroundImage = "url('./images/mobile-header-sith.png')")
+      : (hero.style.backgroundImage = "url('./images/dark-banner.png')");
     document.body.style.backgroundColor = '#000000';
   } else {
-    hero.style.backgroundImage = "url('./images/light-banner.png')";
+    mediaQuery.matches
+      ? (hero.style.backgroundImage = "url('./images/mobile-header-jedi.png')")
+      : (hero.style.backgroundImage = "url('./images/light-banner.png')");
     document.body.style.backgroundColor = '#f4f4f4';
   }
 }
@@ -159,11 +165,11 @@ function characterMode(color) {
             <h2 class="jedi-name">${jedi.name}</h2>
             <a href=${jedi.url} class="btn-bio" target="_blank">READ BIO</a>
             <div class="jedi-info-group">
-              <p class="jedi-title">Home Planet</p>
+              <p class="jedi-subtitle">Home Planet</p>
               <p>${jedi.homePlanet}</p>
             </div>
             <div class="jedi-info-group">
-              <p>Star Ships</p>
+              <p class="jedi-subtitle">Starship</p>
               <p>${jedi.ships}</p>
             </div>
           </div>
